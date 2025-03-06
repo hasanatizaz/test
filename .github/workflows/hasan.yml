@@ -1,1 +1,14 @@
-Helloworld
+name: My-Pipeline
+
+on:
+  workflow_dispatch:
+  push:
+   branches:
+      - 'develop'
+jobs:
+
+  build_and_Deploy:
+
+    runs-on: test-vm
+    steps:
+    - uses: actions/checkout@v2    
